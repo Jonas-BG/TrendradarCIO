@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendradar CIO</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="../src/script.js"></script>
+    <script defer src="../src/charts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/c7caccdf21.js"></script>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <!----Header Menu------->
+                <ul>
+                    <li><a href="index.html">TrendradarCIO</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="umfrage.html">UMFRAGE</a></li>
+                     <!--<li><a href="charts.html">Auswertung</a></li>--->
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <div class="title"> <h1>Ihr Selfassesment</h1> </div>
+<!--
+    <button class="addbtn">Add to firestore</button>
+    <button class="updatebtn">Update in firestore</button>
+-->
+
+<!--Question 1-->
+<div class="survey_container" id="survey_container_1">
+    <div class="question_one_container question_container">
+        <div class="question">
+            In welcher Rolle nehmen Sie am TrendradarCIO teil?
+        </div>
+        <div class="answers_one">
+            <button class="answerBtn" id="quOneAnOne">
+                als CIO
+            </button>
+            <button class="answerBtn" id="quOneAnTwo">
+                als Mitarbeitender in der IT
+            </button>
+            <button class="answerBtn" id="quOneAnThree">
+                als Mitarbeitender aus dem Business
+            </button>
+            <button class="answerBtn" id="quOneAnFour">
+                als Berater/Beraterin
+            </button>
+            <button class="answerBtn" id="quOneAnFive">
+                als Mitarbeitender eines Anbieters
+            </button>
+            <button class="answerBtn" id="quOneAnSix">
+                als Wissenschaftlerin / Wissenschaftler
+            </button>
+            <button class="answerBtn" id="quOneAnSeven">
+                in einer anderen Rolle
+            </button>
+        </div>
+        <button class="NavigationBtn hide" id="compare_qOne">Vergleichen</button>
+        <button class="NavigationBtn hide" id="nextQ_qOne">Nächste Frage</button>        
+    </div>
+
+    <div class="analytics hide" id="chart1_container">
+        <canvas id="chart1"></canvas>
+    </div>
+</div>
+
+
+
+    <!--Question 2-->
+<div class="survey_container hide" id="survey_container_2">
+    <div class="question_two_container question_container">
+        <div class="question">
+            Wie blicken Sie in die Zukunft?
+        </div>
+        <div class="answers_one">
+            <button class="answerBtn" id="quTwoAnOne">
+                optimistisch
+            </button>
+            <button class="answerBtn" id="quTwoAnTwo">
+                skeptisch
+            </button>
+            <button class="answerBtn" id="quTwoAnThree">
+                weiss nicht
+            </button>
+        </div>
+        <button class="NavigationBtn hide" id="compare_qTwo">Vergleichen</button>
+        <button class="NavigationBtn hide" id="nextQ_qTwo">Nächste Frage</button>
+        <div class="back"><button class="backBtn" id="back2">&#8249 Zurück</button></div>
+    </div>
+
+    <div class="analytics hide" id="chart2_container">
+        <canvas id="chart2"></canvas>
+    </div>
+</div>
+
+<div class="survey_container hide" id="survey_container_3">
+    <!--Question 3-->
+    <div class="question_three_container question_container">
+        <div class="question">
+            Wie wird sich die Bedeutung der IT Ihrer Meinung nach in Ihrem Unternehmen in den nächsten 12 Monaten entwickeln?
+        </div>
+        <div class="answers_one">
+            <button class="answerBtn" id="quThreeAnOne">
+                steigt
+            </button>
+            <button class="answerBtn" id="quThreeAnTwo">
+                bleibt gleich
+            </button>
+            <button class="answerBtn" id="quThreeAnThree">
+                sinkt
+            </button>
+            <button class="answerBtn" id="quThreeAnFour">
+                weiss nicht
+            </button>
+        </div>
+        <button class="NavigationBtn hide" id="compare_qThree">Vergleichen</button>
+        <button class="NavigationBtn hide" id="nextQ_qThree">Nächste Frage</button>
+        <div class="back"><button class="backBtn" id="back3">&#8249 Zurück</button></div>
+
+    </div>
+
+    <div class="analytics hide" id="chart3_container">
+        <canvas id="chart3"></canvas>
+    </div>
+</div>
+
+
+    <!--Question 4-->
+    <div class="survey_container hide" id="survey_container_4">
+    <div class="question_four_container question_container">
+        <div class="question">
+            Welches sind Ihrer Meinung nach in den nächsten 12 Monaten die grössten Herausforderungen in der IT?
+        </div>
+        <div class="answers_one">
+            <button class="answerBtn" id="quFourAnOne">
+                IT-Sicherheitsmanagement/Cyber Security
+            </button>
+            <button class="answerBtn" id="quFourAnTwo">
+                Cloud Transformation
+            </button>
+            <button class="answerBtn" id="quFourAnThree">
+                Data Analytics
+            </button>
+            <button class="answerBtn" id="quFourAnFour">
+                Fachtkräftemangel ("War for Talents")
+            </button>
+            <button class="answerBtn" id="quFourAnFive">
+                Kosten/Kostenmanagement
+            </button>
+            <button class="answerBtn" id="quFourAnSix">
+                Migration SAP S/4 HANA
+            </button>
+            <button class="answerBtn" id="quFourAnSeven">
+                Digitalisierung/Digitale Transformation
+            </button>
+            <button class="answerBtn" id="quFourAnEight">
+                Agilität/Agile Transformation
+            </button>
+            <button class="answerBtn" id="quFourAnNine">
+                Customer Experience
+            </button>
+            <button class="answerBtn" id="quFourAnTen">
+                Resillienz in der IT
+            </button>
+            <button class="answerBtn" id="quFourAnEleven">
+                Anderes
+            </button>
+        </div>
+        <button class="NavigationBtn hide" id="compare_qFour">Vergleichen</button>
+        <button class="NavigationBtn hide" id="nextQ_qFour">Nächste Frage</button>
+        <div class="back"><button class="backBtn" id="back4">&#8249 Zurück</button></div>
+
+    </div>
+
+    <div class="analytics hide" id="chart4_container">
+        <canvas id="chart4"></canvas>
+    </div>
+</div>
+
+    <!--Question 5-->
+    <div class="survey_container hide" id="survey_container_5">
+    <div class="question_five_container question_container">
+        <div class="question">
+            Wie denken Sie werden sich die Ausgaben für IT in den nächsten 12 Monaten entwickeln?
+        </div>
+        <div class="answers_one">
+            <button class="answerBtn" id="quFiveAnOne">
+                steigen
+            </button>
+            <button class="answerBtn" id="quFiveAnTwo">
+                bleiben gleich
+            </button>
+            <button class="answerBtn" id="quFiveAnThree">
+                sinken
+            </button>
+            <button class="answerBtn" id="quFiveAnFour">
+                weiss nicht
+            </button>
+        </div>
+        <button class="NavigationBtn hide" id="compare_qFive">Vergleichen</button>
+        <button class="NavigationBtn hide" id="nextQ_qFive">Nächste Frage</button>
+        <div class="back"><button class="backBtn" id="back5">&#8249 Zurück</button></div>
+
+    </div>
+
+    <div class="analytics hide" id="chart5_container">
+        <canvas id="chart5"></canvas>
+    </div>
+</div>
+
+
+
+     <!--Question 6-->
+     <div class="survey_container hide" id="survey_container_6">
+     <div class="question_six_container question_container">
+        <div class="question">
+        Wie wird sich die Wertschöpfungstiefe in der IT in den nächsten 12 Monaten entwickeln?
+        </div>
+        <div class="answers_one">
+            <button class="answerBtn" id="quSixAnOne">
+                steigt
+            </button>
+            <button class="answerBtn" id="quSixAnTwo">
+                bleibt gleich
+            </button>
+            <button class="answerBtn" id="quSixAnThree">
+                sinkt
+            </button>
+            <button class="answerBtn" id="quSixAnFour">
+                weiss nicht
+            </button>
+        </div>
+        <button class="NavigationBtn hide" id="compare_qSix">Vergleichen</button>
+        <button class="NavigationBtn hide" id="nextQ_qSix">Nächste Frage</button>
+        <div class="back"><button class="backBtn" id="back6">&#8249 Zurück</button></div>
+
+    </div>
+
+    <div class="analytics hide" id="chart6_container">
+        <canvas id="chart6"></canvas>
+    </div>
+</div>
+
+
+     <!--Question 7-->
+     <div class="survey_container hide" id="survey_container_7">
+     <div class="question_seven_container question_container">
+        <div class="question">
+        Wie wird sich die Verlagerung der IT in die Cloud in den nächsten 12 Monaten entwickeln?
+        </div>
+        <div class="answers_one">
+            <button class="answerBtn" id="quSevenAnOne">
+                steigend
+            </button>
+            <button class="answerBtn" id="quSevenAnTwo">
+                bleibt gleich
+            </button>
+            <button class="answerBtn" id="quSevenAnThree">
+                sinkend
+            </button>
+            <button class="answerBtn" id="quSevenAnFour">
+                weiss nicht
+            </button>
+        </div>
+        <button class="NavigationBtn" id="compare_qSeven">Vergleichen</button>
+        <button class="NavigationBtn hide" id="nextQ_qSeven">Nächste Frage</button>
+        <div class="back"><button class="backBtn" id="back7">&#8249 Zurück</button></div>
+
+    </div>
+
+    <div class="analytics hide hide" id="chart7_container">
+        <canvas id="chart7"></canvas>
+    </div>
+</div>
+
+
+     <!--Question 8-->
+     <div class="survey_container hide" id="survey_container_8">
+     <div class="question_eight_container question_container">
+        <div class="question">
+        Wie werden sich die Ausgaben für IT-Security in den nächsten 12 Monaten entwickeln?
+        </div>
+        <div class="answers_one">
+            <button class="answerBtn" id="quEightAnOne">
+                steigend
+            </button>
+            <button class="answerBtn" id="quEightAnTwo">
+                bleibt gleich
+            </button>
+            <button class="answerBtn" id="quEightAnThree">
+                sinkend
+            </button>
+            <button class="answerBtn" id="quEightAnFour">
+                weiss nicht
+            </button>
+        </div>
+        <button class="NavigationBtn hide" id="compare_qEight">Vergleichen</button>
+        <button class="NavigationBtn hide" id="finish">Abschliessen</button>
+        <div class="back"><button class="backBtn" id="back8">&#8249 Zurück</button></div>
+
+    </div>
+
+    <div class="analytics hide" id="chart8_container">
+        <canvas id="chart8"></canvas>
+    </div>
+</div>
+
+
+<div class="anliegen hide" id="anliegenContaineer">
+    <p class="thankYou">Vielen Dank für ihre Teilnahme am TrendradarCIO. <br> Gemeinsam können Zukunftstrends besser eingeschätzt werden.</p>
+    <h3>Haben Sie Fragen oder Anmerkungen?</h3>
+
+    <form class="addContact">
+        <input type="text" placeholder="Email" name="email" required>
+        <textarea placeholder="Ihr Anliegen" name="question"  cols="40" rows="5" required></textarea>
+        <button class="addBtn">Absenden</button>
+    </form>
+</div>
+
+
+
+    <!-----------Footer----------->
+
+    <div class="footer">
+        <h4>Über Uns</h4>
+        <p>Das TrendradarCIO ist ein Projekt des Lehrstuhls für Wirtschaftsinformatik der HSG. Ziel ist es Personen aus der IT einen besseren Überblick über die Trends der nächsten 12 Monate zu geben. Dieses Tool wurde als Teil einer Masterarbeit entwickelt.</p>
+        <p class="made-by">This is a Masters Thesis Project by Jonas Gisler </p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>

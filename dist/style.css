@@ -1,0 +1,496 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(122, 185, 122, 0.7),rgba(122, 185, 122, 0.7));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.sub-title{
+    padding: 10px;
+}
+.sub-header{
+    height: 70px;
+    width: 100%;
+    background-image: linear-gradient(rgba(122, 185, 122, 0.7),rgba(122, 185, 122, 0.7)),url(../eduford_img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #000;
+}
+.title h1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    height: 60px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+}
+.text-box{
+    width: 90%;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 55px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(19, 94, 5);
+    border: 1px solid rgb(19, 94, 5);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    color: #fff;
+    border:1px solid rgb(19, 94, 5);
+    background: rgb(19, 94, 5);
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .text-box h1, .title h1{
+        font-size: 30px;
+    }
+}
+    
+
+/*--- 
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+   
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: rgb(113, 177, 102);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #000;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+} */
+
+/*-------- topics --------*/
+
+.topics{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background-color: rgb(252, 232, 204);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*-----------facilities-----------*/
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col p {
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/*---------CTA--------------------*/
+
+.cta{
+    width: 60%;
+    margin: 100px auto;
+    background-image: linear-gradient(rgba(122, 185, 122, 0.7),rgba(122, 185, 122, 0.7)),url(eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width:700px) {
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*--------------Footer-------------------*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+.footer h4{
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-weight: 600;
+}
+.made-by{
+    font-size: 10px;
+}
+
+/*---------------t us page-------------------*/
+/*---------------About us page-------------------*/
+/*---------------About us page-------------------*/
+/*---------------About us page-------------------*/
+/*---------------About us page-------------------*/
+
+
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+
+
+/*---------------UMFRAGE-------------------*/
+/*---------------UMFRAGE-------------------*/
+/*---------------UMFRAGE-------------------*/
+/*---------------UMFRAGE-------------------*/
+
+:root {
+    --question_color:#00802F;
+}
+
+.survey_container{
+    display: block;
+}
+
+.question_container{
+    background-color: var(--question_color);
+    color: #e9eeea;
+    text-align: center;
+    width: 80%;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.analytics{
+    width: 60vw;
+    margin-top: 15px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.answers_one{
+    margin-top: 10px;
+    padding-bottom: 15px;
+    align-content: center;
+}
+
+.answerBtn{
+    display: block;
+    margin-top: 2px;
+    padding: 2%;
+    width: 100%;
+    height:50px
+}
+
+.answerBtn:hover{
+    background-color: #b3c6b7;
+}
+
+.embedded-umfrage{
+    width: auto;
+    margin: auto;
+}
+.umfrage-js{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    max-height: 500px;
+}
+
+.container{
+    width: 800px;
+    max-width: 45%;
+    background-color: wheat;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 5px 2px;
+    margin-right: 50px;
+    display: inline-block;
+}
+.btn-grid{
+    display: grid;
+    gap: 10px;
+    margin: 20px 20px;
+}
+.survey-btn{
+    border: 2px solid black;
+    background-color: rgb(19, 94, 5);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+}
+.survey-btn:hover{
+    border-color: white;
+}
+
+.start-btn, .compare-btn, .next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analytics{
+    width: 60vw;
+    margin-top: 15px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.hide{
+    display: none;
+}
+
+
+.back{
+    text-align: left;
+}
+
+.backBtn{
+    margin-left: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   background-color: transparent;
+   border: transparent;
+   color: white;
+}
+
+.backBtn:hover{
+    background-color: white;
+    color: black;
+    opacity: 0.5;
+}
+
+.NavigationBtn{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+/*---------------CHARTS-------------------*/
+/*---------------CHARTS-------------------*/
+/*---------------CHARTS-------------------*/
+/*---------------CHARTS-------------------*/
+
+.chart{
+    margin: 200px auto;
+    width: 1000px;
+    height: 500px;
+}
+
+
+
+/*---------------Forms-------------------*/
+/*---------------Forms-------------------*/
+/*---------------Forms-------------------*/
+
+.anliegen{
+    padding: 5px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 30px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    width: 60vw;
+    background-color: var(--question_color);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  textarea{
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .addBtn{
+    margin-top: 2px;
+    width: 30%;
+    height:30px
+  }
+
+  .thankYou{
+    color: white;
+  }
